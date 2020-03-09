@@ -23,7 +23,6 @@
 }
 @mixin btn-blue {
   border-radius: 0 !important;
-  margin: 10px;
   box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.2);
   padding: 0 20px;
   background: $blue;
@@ -47,7 +46,7 @@
 }
 @mixin btn-purple {
   border-radius: 0 !important;
-  margin: 10px;
+
   box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.2);
   padding: 0 20px;
   background: $pink;
@@ -56,6 +55,7 @@
   transition: all 0.2s ease-in-out;
   text-align: left;
   line-height: 50px;
+  cursor: pointer;
   img {
     width: 50px;
     margin-right: 10px;

@@ -6,7 +6,7 @@
       {
         "id_test": 2,
         "langage": "Buzzness",
-        "niveau": 2,
+        "niveau": "junior",
         "date": "20/12/2016",
         "reponse_user": [
           {
@@ -26,7 +26,7 @@
       {
         "id_test": 3,
         "langage": "Buzzness",
-        "niveau": 3,
+        "niveau": "junior",
         "date": "20/12/2017",
         "reponse_user": [
           {
@@ -46,7 +46,7 @@
       {
         "id_test": 4,
         "langage": "Buzzness",
-        "niveau": 2,
+        "niveau": "junior",
         "date": "20/12/2018",
         "reponse_user": [
           {
@@ -66,7 +66,7 @@
       {
         "id_test": 5,
         "langage": "Buzzness",
-        "niveau": 1,
+        "niveau": "junior",
         "date": "20/12/2019",
         "reponse_user": [
           {
@@ -86,7 +86,7 @@
       {
         "id_test": 1,
         "langage": "Buzzness",
-        "niveau": 1,
+        "niveau": "junior",
         "date": "20/12/2015",
         "reponse_user": [
           {
@@ -112,7 +112,7 @@
       {
         "id_test": 1,
         "langage": "Buzzness",
-        "niveau": 1,
+        "niveau": "junior",
         "date": "20/12/2015",
         "reponse_user": [
           {
@@ -132,13 +132,13 @@
       {
         "id_test": 2,
         "langage": "Buzzness",
-        "niveau": 2,
+        "niveau": "junior",
         "date": "20/12/2016"
       },
       {
         "id_test": 3,
         "langage": "Buzzness",
-        "niveau": 3,
+        "niveau": "junior",
         "date": "20/12/2017",
         "reponse_user": [
           {
@@ -158,7 +158,7 @@
       {
         "id_test": 4,
         "langage": "Buzzness",
-        "niveau": 2,
+        "niveau": "junior",
         "date": "20/12/2018",
         "reponse_user": [
           {
@@ -178,7 +178,7 @@
       {
         "id_test": 5,
         "langage": "Buzzness",
-        "niveau": 1,
+        "niveau": "junior",
         "date": "20/12/2019",
         "reponse_user": [
           {
@@ -204,7 +204,7 @@
       {
         "id_test": 3,
         "langage": "Buzzness",
-        "niveau": 1,
+        "niveau": "junior",
         "date": "20/12/2015",
         "reponse_user": [
           {
@@ -223,7 +223,7 @@
       },
       {
         "langage": "Buzzness",
-        "niveau": 2,
+        "niveau": "junior",
         "date": "20/12/2016",
         "reponse_user": [
           {
@@ -242,7 +242,7 @@
       },
       {
         "langage": "Buzzness",
-        "niveau": 3,
+        "niveau": "junior",
         "date": "20/12/2017",
         "reponse_user": [
           {
@@ -262,7 +262,7 @@
       {
         "id_test": 4,
         "langage": "Buzzness",
-        "niveau": 2,
+        "niveau": "junior",
         "date": "20/12/2018",
         "reponse_user": [
           {
@@ -282,7 +282,7 @@
       {
         "id_test": 5,
         "langage": "Buzzness",
-        "niveau": 1,
+        "niveau": "junior",
         "date": "20/12/2019",
         "reponse_user": [
           {
@@ -308,7 +308,7 @@
       {
         "id_test": 2,
         "langage": "Buzzness",
-        "niveau": 1,
+        "niveau": "junior",
         "date": "20/12/2015",
         "reponse_user": [
           {
@@ -328,7 +328,7 @@
       {
         "id_test": 3,
         "langage": "Buzzness",
-        "niveau": 2,
+        "niveau": "junior",
         "date": "20/12/2016",
         "reponse_user": [
           {
@@ -347,7 +347,7 @@
       },
       {
         "langage": "Buzzness",
-        "niveau": 3,
+        "niveau": "junior",
         "date": "20/12/2017",
         "reponse_user": [
           {
@@ -367,7 +367,7 @@
       {
         "id_test": 4,
         "langage": "Buzzness",
-        "niveau": 2,
+        "niveau": "junior",
         "date": "20/12/2018",
         "reponse_user": [
           {
@@ -387,7 +387,7 @@
       {
         "id_test": 5,
         "langage": "Buzzness",
-        "niveau": 1,
+        "niveau": "junior",
         "date": "20/12/2019",
         "reponse_user": [
           {
@@ -413,7 +413,7 @@
       {
         "id_test": 1,
         "langage": "Buzzness",
-        "niveau": 1,
+        "niveau": "junior",
         "date": "20/12/2015",
         "reponse_user": [
           {
@@ -433,7 +433,7 @@
       {
         "id_test": 2,
         "langage": "Buzzness",
-        "niveau": 2,
+        "niveau": "junior",
         "date": "20/12/2016",
         "reponse_user": [
           {
@@ -453,7 +453,7 @@
       {
         "id_test": 3,
         "langage": "Buzzness",
-        "niveau": 3,
+        "niveau": "junior",
         "date": "20/12/2017",
         "reponse_user": [
           {
@@ -473,7 +473,7 @@
       {
         "id_test": 4,
         "langage": "Buzzness",
-        "niveau": 2,
+        "niveau": "junior",
         "date": "20/12/2018",
         "reponse_user": [
           {
@@ -493,7 +493,7 @@
       {
         "id_test": 5,
         "langage": "Buzzness",
-        "niveau": 1,
+        "niveau": "junior",
         "date": "20/12/2019",
         "reponse_user": [
           {
@@ -519,7 +519,7 @@
       {
         "id_test": 1,
         "langage": "Buzzness",
-        "niveau": 1,
+        "niveau": "junior",
         "date": "20/12/2015",
         "reponse_user": [
           {
@@ -539,7 +539,7 @@
       {
         "id_test": 2,
         "langage": "Buzzness",
-        "niveau": 2,
+        "niveau": "junior",
         "date": "20/12/2016",
         "reponse_user": [
           {
@@ -559,7 +559,7 @@
       {
         "id_test": 3,
         "langage": "Buzzness",
-        "niveau": 3,
+        "niveau": "junior",
         "date": "20/12/2017",
         "reponse_user": [
           {
@@ -579,7 +579,7 @@
       {
         "id_test": 4,
         "langage": "Buzzness",
-        "niveau": 2,
+        "niveau": "junior",
         "date": "20/12/2018",
         "reponse_user": [
           {
@@ -599,7 +599,7 @@
       {
         "id_test": 5,
         "langage": "Buzzness",
-        "niveau": 1,
+        "niveau": "junior",
         "date": "20/12/2019",
         "reponse_user": [
           {
@@ -625,7 +625,7 @@
       {
         "id_test": 1,
         "langage": "Buzzness",
-        "niveau": 1,
+        "niveau": "junior",
         "date": "20/12/2015",
         "reponse_user": [
           {
@@ -646,7 +646,7 @@
         "id_test": 2,
 
         "langage": "Buzzness",
-        "niveau": 2,
+        "niveau": "junior",
         "date": "20/12/2016",
         "reponse_user": [
           {
@@ -667,7 +667,7 @@
         "id_test": 3,
 
         "langage": "Buzzness",
-        "niveau": 3,
+        "niveau": "junior",
         "date": "20/12/2017",
         "reponse_user": [
           {
@@ -687,7 +687,7 @@
       {
         "id_test": 4,
         "langage": "Buzzness",
-        "niveau": 2,
+        "niveau": "junior",
         "date": "20/12/2018",
         "reponse_user": [
           {
@@ -707,7 +707,7 @@
       {
         "id_test": 5,
         "langage": "Buzzness",
-        "niveau": 1,
+        "niveau": "junior",
         "date": "20/12/2019",
         "reponse_user": [
           {

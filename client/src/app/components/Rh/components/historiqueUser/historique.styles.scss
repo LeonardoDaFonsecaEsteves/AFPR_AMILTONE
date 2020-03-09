@@ -1,3 +1,4 @@
+@import "../../../../../scss/mixin.scss";
 .details {
   background: #f8f9fa;
   height: 100vh;
@@ -6,6 +7,22 @@
   .dashbord {
     width: 100%;
     padding: 10px;
+    .header {
+      width: 95%;
+      margin: 20px auto 20px 20px;
+      display: inline-flex;
+      justify-content: space-between;
+      .btn {
+      }
+      h1 {
+        font-size: 35px;
+        color: #495057;
+        font-weight: bold;
+      }
+      .logout {
+        @include btn-purple;
+      }
+    }
     .userInfo {
       width: 100%;
       font-size: 25px;
@@ -13,18 +30,19 @@
       display: flex;
       justify-content: space-around;
       width: 100%;
-      .btn {
-        border-radius: 0 !important;
-        width: 10%;
-        box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.2);
-        color: #f8f9fa;
-        background: #295bc5;
-        transition: all 0.2s ease-in-out;
-        font-size: 25px;
-        &:hover {
-          background-color: #ce3089;
-          color: white;
-        }
+    }
+    .Action {
+      width: 350px;
+      display: flex;
+      flex-direction: column;
+      .Send {
+        @include btn-blue;
+      }
+      .Edit {
+        @include btn-blue;
+      }
+      .Delete {
+        @include btn-purple;
       }
     }
     .infoTest {

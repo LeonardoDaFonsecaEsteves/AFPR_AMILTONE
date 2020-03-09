@@ -10,6 +10,7 @@ import listAdd from '../../../img/add.svg'
 import logo from '../../../img/Logo.svg'
 const Rh = ({ logOut }) => {
     const [state, dispatch] = useReducer(rh, initialState)
+
     useEffect(() => {
         dispatch({ type: "GET_ALL_USER" })
     }, [])
@@ -46,9 +47,6 @@ const Rh = ({ logOut }) => {
                         <span><img alt="add" src={listAdd} /></span>
                         <span>Ajouter un candidat</span>
                     </div>
-                    <div className="btn logout" onClick={() => logOut("logout")} >
-                        <span>Déconnexion</span>
-                    </div>
                 </div>
                 {/* view list or view add */}
                 {
@@ -57,12 +55,14 @@ const Rh = ({ logOut }) => {
                         state={state}
                         CHANGE_DASH={(view) => CHANGE_DASH(view)}
                         GET_ID_USER={(userId) => GET_ID_USER(userId)}
+                        logOut={(role) => logOut(role)}
                     />
                 }
                 {
                     state.dashbord === "add" &&
                     <AddNewUser
                         ADD_NEW_USER={(data) => ADD_NEW_USER(data)}
+                        logOut={(role) => logOut(role)}
                     />
                 }
                 {
@@ -71,6 +71,7 @@ const Rh = ({ logOut }) => {
                         state={state}
                         CHANGE_DASH={(view) => CHANGE_DASH(view)}
                         SET_MODAL_VISIBLE={(usertestId) => SET_MODAL_VISIBLE(usertestId)}
+                        logOut={(role) => logOut(role)}
                     />
                 }
 
