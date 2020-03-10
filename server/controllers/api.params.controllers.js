@@ -3,17 +3,18 @@ const sql = require("../config/db.config");
 const email = require("../utils/send_email/send_mail");
 
 /** METHODE POUR RECUPERER TEST COMPLET */
-let Q = [];
 exports.test_for_user = (req, res) => {
   let id_test = req.params.id;
   sql.query(`SELECT *  FROM quiz WHERE id_quiz = ${id_test}`, (err, Quiz) => {
-    Q.push(Quiz[0]);
+    questions_has_quiz(id_test, returnQP => {
+      let testComplet = { ...Quiz[0], question: returnQP };
+      res.status(200).send(testComplet);
+    });
   });
-  questions_has_quiz(res, id_test);
 };
 
 let Questions = [];
-const questions_has_quiz = (res, id_test, returnQP) => {
+const questions_has_quiz = (id_test, returnQP) => {
   sql.query(
     `SELECT questions_id_questions FROM questions_has_quiz WHERE quiz_id_quiz = ${id_test}`,
     (err, rows_id_Q) => {
@@ -33,7 +34,7 @@ const questions_has_quiz = (res, id_test, returnQP) => {
       }
     }
   );
-  res.status(200).send({ ...Q, question: Questions });
+  returnQP(Questions);
   Questions = [];
 };
 
