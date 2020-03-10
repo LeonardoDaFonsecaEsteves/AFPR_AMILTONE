@@ -9,6 +9,10 @@ module.exports = function(app) {
   // api Routes avec params
   app.route("/tests/:id").get(api_params.test_for_user);
   app.route("/send/test/:id_test/user/:id_user").post(api_params.send_test);
+  app
+    .route("/user/:id_user/test/:id_test/result/:id_result")
+    .put(api_params.send_test_result);
+
   app.route("tests/:id_test/answers/");
   app.route("/questions/:id").get(api_params.questions_id);
   // app.route("/users/:id/results").get(api_params.users_results);

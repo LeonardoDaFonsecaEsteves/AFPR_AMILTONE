@@ -1,4 +1,6 @@
+const moment = require("moment");
 const sql = require("../config/db.config");
+const email = require("../utils/send_email/send_mail");
 let id = [];
 let Questions = [];
 
@@ -74,12 +76,48 @@ const get_proposition = (id_questions, getPropositions) => {
 /** ENVOI D'UN TEST + CREATION DU CHAMPS RESULTE USER */
 
 exports.send_test = (req, res) => {
-  console.log(req.body);
   let id_test = req.params.id_test;
   let id_user = req.params.id_user;
-  let sending_date = sql.query(
-    `INSERT INTO user_results( sending_date,  users_id_users, quiz_id_quiz) VALUES (${Date.now()},${id_user},${id_test})`
-  );
+  let date = moment().format("YYYY-MM-DD");
 
-  res.send("OK");
+  sql.query(
+    `INSERT INTO user_results( score, sending_date,  users_id_users, quiz_id_quiz) VALUES (${0},${JSON.stringify(
+      date
+    )},${id_user},${id_test})`,
+    (err, rows) => {
+      email.send_email(
+        "nhosteins@amiltone.com",
+        `localhost:3000/user/${id_user}/test/${id_test}/result/${rows.insertId}`
+      );
+      res.send(`test envoyé`);
+    }
+  );
+};
+
+exports.send_test_result = (req, res) => {
+  let date = moment().format("YYYY-MM-DD");
+
+  let id_result = req.params.id_result;
+  sql.query(
+    `SELECT * FROM user_results WHERE id_user_results = ${id_result}`,
+    (err, rows) => {
+      if (err) throw err;
+
+      if (rows[0].response_date === null) {
+        sql.query(
+          `UPDATE user_results SET response_date=${JSON.stringify(
+            date
+          )},responses_user=${JSON.stringify(req.body.responses_users)}`,
+          err => {
+            if (err) throw err;
+            else {
+              res.send("Resultat sauvegardé");
+            }
+          }
+        );
+      } else {
+        res.send("TEST déja passé");
+      }
+    }
+  );
 };
