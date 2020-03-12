@@ -11,4 +11,4 @@ routes(app);
 
 app.listen(port);
 
-console.log("API run in " + port);
+console.log("Server is run in " + port);

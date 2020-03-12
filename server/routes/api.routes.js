@@ -1,20 +1,31 @@
 module.exports = function(app) {
-  const api_single = require("../controllers/api.single.controller");
-  const api_params = require("../controllers/api.params.controllers");
-  // api Routes simple
-  app.route("/tests").get(api_single.test);
-  app.route("/questions").get(api_single.questions);
-  app.route("/users").get(api_single.users);
+  const users = require("../controllers/users/users");
+  const test = require("../controllers/quiz/quiz");
+  const question = require("../controllers/quesitons/questions");
 
-  // api Routes avec params
-  app.route("/tests/:id").get(api_params.test_for_user);
-  app.route("/send/test/:id_test/user/:id_user").post(api_params.send_test);
+  // routes pour les users
+  app
+    .route("/users")
+    .get(users.users)
+    .post(users.new_user);
+
+  // routes pour le test
+  app
+    .route("/tests")
+    .get(test.test)
+    .post(test.new_test);
+  app.route("/check/:id_result").get(test.check_is_started);
+  app.route("/start/:id_result").put(test.test_is_start);
+  app.route("/tests/:id").get(test.test_for_user);
+  app.route("/send/test/:id_test/user/:id_user").post(test.send_test);
   app
     .route("/user/:id_user/test/:id_test/result/:id_result")
-    .put(api_params.send_test_result);
+    .put(test.send_test_result);
 
-  app.route("tests/:id_test/answers/");
-  app.route("/questions/:id").get(api_params.questions_id);
-  // app.route("/users/:id/results").get(api_params.users_results);
-  // app.route("/user/:id_user/test/:id_test").get(api_params.test_for_user);
+  // routes pour les questions
+  app
+    .route("/questions")
+    .get(question.questions)
+    .post(question.new_question);
+  app.route("/questions/:id").get(question.questions_id);
 };
